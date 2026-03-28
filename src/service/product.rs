@@ -18,7 +18,7 @@ impl ProductService {
     }
 
     pub fn list() -> Result<Vec<Product>> {
-        return Ok(ProductRepository::get_all());
+        return Ok(ProductRepository::list_all());
     }
 
     pub fn read(id: usize) -> Result<Product> {
