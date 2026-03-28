@@ -5,7 +5,6 @@ use bambangshop::Result;
 use crate::model::product::Product;
 use crate::service::product::ProductService;
 
-
 #[post("/", data = "<product>")]
 pub fn create(product: Json<Product>) -> Result<Created<Json<Product>>> {
     return match ProductService::create(product.into_inner()) {
