@@ -78,6 +78,14 @@ This is the place for you to write reflections:
 
 #### Reflection Publisher-1
 
+Reflection Publisher-1
+
+1. Dalam kasus BambangShop, trait tidak wajib karena kita hanya memiliki satu jenis Subscriber dengan perilaku yang sama. Menggunakan struct saja sudah cukup, kecuali jika ingin mendukung banyak tipe subscriber dengan implementasi berbeda.
+
+2. Menggunakan Vec kurang ideal karena kita membutuhkan akses dan penghapusan data secara cepat berdasarkan key unik (url). Oleh karena itu, DashMap (map/dictionary) lebih sesuai karena memberikan lookup yang efisien dan menjamin keunikan.
+
+3. Singleton saja tidak cukup karena tidak menjamin thread safety. DashMap tetap diperlukan karena menyediakan struktur data yang aman untuk concurrent access, yang sesuai dengan kebutuhan aplikasi web yang berjalan secara paralel.
+
 #### Reflection Publisher-2
 
 #### Reflection Publisher-3
