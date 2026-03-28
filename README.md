@@ -87,5 +87,10 @@ Reflection Publisher-1
 3. Singleton saja tidak cukup karena tidak menjamin thread safety. DashMap tetap diperlukan karena menyediakan struktur data yang aman untuk concurrent access, yang sesuai dengan kebutuhan aplikasi web yang berjalan secara paralel.
 
 #### Reflection Publisher-2
+1. Memisahkan Service dan Repository membantu menerapkan separation of concerns, di mana Repository fokus pada akses data dan Service pada business logic. Hal ini membuat kode lebih modular, mudah dirawat, dan lebih mudah diuji.
+
+2. Jika hanya menggunakan Model, maka Model akan menjadi terlalu kompleks karena harus menangani data, logic, dan interaksi antar komponen sekaligus. Ini akan menyebabkan coupling tinggi dan membuat kode sulit dipahami serta sulit dikembangkan.
+
+3. Postman sangat membantu untuk menguji endpoint API dengan cepat tanpa perlu membuat frontend terlebih dahulu. Fitur seperti collection, environment, dan request history sangat berguna untuk debugging dan otomatisasi testing dalam pengembangan proyek.
 
 #### Reflection Publisher-3
