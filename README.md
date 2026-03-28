@@ -94,3 +94,9 @@ Reflection Publisher-1
 3. Postman sangat membantu untuk menguji endpoint API dengan cepat tanpa perlu membuat frontend terlebih dahulu. Fitur seperti collection, environment, dan request history sangat berguna untuk debugging dan otomatisasi testing dalam pengembangan proyek.
 
 #### Reflection Publisher-3
+
+1. Pada tutorial ini digunakan Push model, karena publisher langsung mengirim data notifikasi ke setiap subscriber melalui HTTP POST tanpa perlu diminta oleh subscriber.
+
+2. Jika menggunakan Pull model, subscriber bisa lebih fleksibel mengambil data saat dibutuhkan dan payload dari publisher bisa lebih ringan. Namun, hal ini membuat sistem lebih kompleks karena subscriber harus melakukan request tambahan, sehingga kurang efisien untuk notifikasi real-time.
+
+3. Jika tidak menggunakan multithreading, pengiriman notifikasi akan dilakukan secara berurutan (satu per satu), sehingga menjadi lebih lambat ketika jumlah subscriber banyak. Hal ini juga dapat menyebabkan aplikasi utama menjadi terblokir lebih lama dan menurunkan performa keseluruhan.
